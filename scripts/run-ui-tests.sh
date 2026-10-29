@@ -28,6 +28,10 @@ print(f"Total: {r.get('total')}  ✅ {r.get('passed')}  ❌ {r.get('failed')}  �
 for tc in r.iter('test-case'):
     ok = tc.get('result') == 'Passed'
     print(f"  {'✅' if ok else '❌'} {tc.get('name')} ({float(tc.get('duration', 0)):.1f} s)")
+    out = tc.find('output')
+    for line in (out.text or '').splitlines() if out is not None else []:
+        if '[Desempenho]' in line:  # o teste de FPS deixa a nota (ruim / regular / bom / excelente) no log
+            print(f"     📊 {line.split('[Desempenho] ', 1)[-1].strip()}")
     if not ok:
         msg = tc.find('./failure/message')
         print(f"     {(msg.text or '').strip()[:300] if msg is not None else ''}")
@@ -36,6 +40,12 @@ else
   echo "Sem arquivo de resultados. Veja o log: $LOG"; tail -40 "$LOG"
 fi
 
+if [ -f "$APP_DATA/desempenho.txt" ]; then
+  mkdir -p "$SHOTS"
+  cp "$APP_DATA/desempenho.txt" "$SHOTS/desempenho.txt"
+  echo "📊 $(head -1 "$APP_DATA/desempenho.txt")"
+  tail -n +2 "$APP_DATA/desempenho.txt"
+fi
 if [ -d "$APP_DATA/fotos" ]; then
   mkdir -p "$SHOTS"
   cp -R "$APP_DATA/fotos/." "$SHOTS/"

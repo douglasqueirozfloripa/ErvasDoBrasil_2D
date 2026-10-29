@@ -1,6 +1,6 @@
 # Plantas e receitas
 
-Dados em `Assets/Resources/Data/plants.json` e `recipes.json`. Cada planta com `remedio` gera sozinha um **preparo simples** (chá, gel, ramo, banho ou defumação) no Caldeirão. 🇧🇷 = nativa do Brasil.
+Dados em `Assets/Resources/Data/plants.json` e `recipes.json`. Cada planta com `remedio` gera sozinha um **preparo simples** (chá, gel, ramo, banho ou defumação) no Caldeirão. O preparo simples aceita a erva **fresca ou seca** (chá se faz com as duas; a fresca é gasta primeiro), então secar é escolha, não obrigação: a seca vale 1,5× na feira e é o caminho para o pó dos elixires. As receitas compostas dizem a forma que pedem: (seca) ou (pó). 🇧🇷 = nativa do Brasil.
 
 ## As 23 plantas do Livro
 

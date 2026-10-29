@@ -2,7 +2,7 @@
 
 RPG cozy top-down em **Unity 2D** sobre o poder das plantas brasileiras, chás, ervas e do nosso folclore. Você é uma raizeira que herdou o sítio da avó: prepara a terra, planta, colhe, seca, pila, faz chás, garrafadas e elixires, cura a si mesma (inclusive a fissura do cigarro) e os aldeões. À noite, protege a casa das assombrações com espada-de-são-jorge, arruda, guiné e pimenteira, **sem violência**.
 
-**Plataformas:** iPhone (Simulador iOS) · macOS · **Engine:** Unity 6.3 LTS (C# 9, .NET Standard 2.1) · **Câmera:** top-down · **Combate:** passivo · **Testes:** 211 unitários + 36 de interface (NUnit) · **Lint:** Roslyn + analisadores .NET e Unity
+**Plataformas:** iPhone (Simulador iOS) · macOS · **Engine:** Unity 6.3 LTS (C# 9, .NET Standard 2.1) · **Câmera:** top-down · **Combate:** passivo · **Testes:** 239 unitários + 38 de interface (NUnit, com teste de desempenho) · **Lint:** Roslyn + analisadores .NET e Unity
 
 ---
 

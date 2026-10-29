@@ -78,7 +78,7 @@ O dia dura 240 s. O **Menu** (Esc), os **Jogos salvos**, os **Bastidores** e as 
 As duas primeiras noites são seguras (a casa ainda está benzida pela vó). Veja [Assombrações](11-assombracoes.md).
 
 ## Varal, caldeirão e cliques
-- **Varal:** 6 ganchos, 45 s para secar. **Tirar** devolve a erva para a bolsa sem perder nada: seca se já secou, fresca se ainda não.
+- **Varal:** 6 ganchos, 45 s para secar. **Tirar** devolve a erva para a bolsa sem perder nada: seca se já secou, fresca se ainda não. A erva seca serve nos preparos simples do caldeirão como a fresca (o chá de mulungu sai das duas), vale 1,5× na feira e vira pó no pilão para os elixires.
 - **Caldeirão e listas:** depois de um clique, os botões das listas ficam travados por 0,3 s (0,8 s no **Preparar**, que mostra "Preparando…"). Um clique duplo não prepara duas vezes nem cai no botão da linha que subiu para o lugar da que sumiu.
 
 ## Jogo salvo

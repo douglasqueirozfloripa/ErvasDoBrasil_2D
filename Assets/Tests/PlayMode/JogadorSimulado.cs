@@ -53,6 +53,7 @@ namespace ErvasDoBrasil.Tests.PlayMode
             PedidosParaSair = 0;
             GameManager.AoSair = () => PedidosParaSair++; // "Sair do jogo" não fecha o app de teste no meio da rodada
             InputCompat.VirtualStick = Vector2.zero;
+            AmostradorDeQuadros.Garantir(); // mede o FPS da bateria inteira (sobrevive às trocas de cena)
             SceneManager.LoadScene("Main");
             yield return Esperar(() => SceneManager.GetActiveScene().name == "Main" && GameManager.I != null && Tela.Current == GameUI.Window.Inicio,
                 "o menu inicial não abriu");
@@ -70,6 +71,7 @@ namespace ErvasDoBrasil.Tests.PlayMode
             GameAudio.Chave = GameAudio.ChavePadrao;
             GameAudio.Recarregar();
             GameManager.AoSair = null;
+            if (AmostradorDeQuadros.I != null) AmostradorDeQuadros.I.FimDoTeste(Path.Combine(Pasta, "desempenho.txt"));
         }
 
         // ───────── Esperas ─────────
@@ -218,6 +220,8 @@ namespace ErvasDoBrasil.Tests.PlayMode
         protected IEnumerator Foto(string nome)
         {
             if (Application.isBatchMode) yield break;
+            var amostrador = AmostradorDeQuadros.I;
+            if (amostrador != null) amostrador.Pausado = true; // ler a tela e gravar o PNG custam quadros que não são do jogo
             yield return new WaitForEndOfFrame();
             int w = Screen.width, h = Screen.height;
             var tex = new Texture2D(w, h, TextureFormat.RGB24, false);
@@ -230,6 +234,9 @@ namespace ErvasDoBrasil.Tests.PlayMode
             Directory.CreateDirectory(dir);
             fotos++;
             File.WriteAllBytes(Path.Combine(dir, fotos.ToString("00", CultureInfo.InvariantCulture) + "-" + nome + ".png"), png);
+            yield return null; // o quadro que pagou a foto
+            yield return null;
+            if (amostrador != null) amostrador.Pausado = false;
         }
     }
 }

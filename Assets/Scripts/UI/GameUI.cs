@@ -665,10 +665,20 @@ namespace ErvasDoBrasil
         string IngredientText(Ingredient ing, bool showHave)
         {
             var p = S.Db.Plant(ing.plantId);
-            string forma = ing.Form == HerbForm.Seca ? " (seca)" : (ing.Form == HerbForm.Po ? " (pó)" : "");
-            string txt = ing.qtd + "x " + (p != null ? p.nome : ing.plantId) + forma;
-            if (showHave) txt += " [" + S.Inventory.Count(Inventory.IngredientKey(ing)) + "]";
+            string txt = ing.qtd + "x " + (p != null ? p.nome : ing.plantId) + FormaTexto(ing.Form);
+            if (showHave) txt += " [" + S.Inventory.Count(ing) + "]"; // soma as formas que a receita aceita
             return txt;
+        }
+
+        static string FormaTexto(HerbForm forma)
+        {
+            switch (forma)
+            {
+                case HerbForm.Seca: return " (seca)";
+                case HerbForm.Po: return " (pó)";
+                case HerbForm.FrescaOuSeca: return " (fresca ou seca)";
+                default: return "";
+            }
         }
 
         float clickLockUntil;

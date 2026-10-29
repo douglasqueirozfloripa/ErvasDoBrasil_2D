@@ -90,7 +90,7 @@ namespace ErvasDoBrasil.Core
                 descricao = p.preparo,
                 efeito = effect.ToString(),
                 cura = cura,
-                ingredientes = new[] { new Ingredient(p.id, 1) },
+                ingredientes = new[] { new Ingredient(p.id, 1, HerbForm.FrescaOuSeca) }, // chá se faz com a erva fresca ou seca
                 precoVenda = p.precoVenda * 2 + 2,
                 doses = 1,
                 duracaoDias = 1,

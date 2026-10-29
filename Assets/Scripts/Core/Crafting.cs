@@ -11,7 +11,7 @@ namespace ErvasDoBrasil.Core
         {
             if (r == null || r.ingredientes == null) return false;
             foreach (var ing in r.ingredientes)
-                if (!inv.Has(Inventory.IngredientKey(ing), ing.qtd)) return false;
+                if (!inv.Has(ing)) return false;
             return true;
         }
 
@@ -23,7 +23,7 @@ namespace ErvasDoBrasil.Core
             if (!status.TrySpend(CustoEnergia)) return CraftOutcome.SemEnergia;
 
             foreach (var ing in r.ingredientes)
-                inv.Remove(Inventory.IngredientKey(ing), ing.qtd);
+                inv.Remove(ing);
             inv.Add(Inventory.Product(r.id), 1);
 
             if (r.chanceQueimadura > 0f && rng.Value() < r.chanceQueimadura)

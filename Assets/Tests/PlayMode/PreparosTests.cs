@@ -53,5 +53,36 @@ namespace ErvasDoBrasil.Tests.PlayMode
             yield return Clicar("Pilar");
             yield return Esperar(() => Sessao.Inventory.Count(Inventory.Powder("mulungu")) == 1, "a erva seca não virou pó");
         }
+
+        /// <summary>Playtest de 29/10: a jogadora secou todo o mulungu e o chá ficava travado em "Faltam ingredientes".</summary>
+        [UnityTest]
+        public IEnumerator Mulungu_seco_tambem_faz_o_cha_no_caldeirao()
+        {
+            yield return ComecarPartida();
+            var varal = Estacao(GameUI.Window.Varal);
+            int frescos = Sessao.Inventory.Count(Inventory.Herb("mulungu"));
+            yield return Abrir(varal, GameUI.Window.Varal);
+            for (int i = 0; i < frescos; i++)
+            {
+                yield return Clicar("Pendurar");
+                yield return Esperar(() => Sessao.Rack.Slots.Count == i + 1, "a erva não foi pendurada");
+            }
+            yield return Apertar(GameKey.Fechar);
+            yield return Esperar(() => !Tela.IsModal, "Esc não fechou o varal");
+            yield return Acelerar(() => Sessao.Rack.ReadyCount == frescos, "as ervas não secaram");
+            yield return Abrir(varal, GameUI.Window.Varal);
+            yield return Clicar("Recolher secas (" + frescos + ")");
+            yield return Esperar(() => Sessao.Inventory.Count(Inventory.Dried("mulungu")) == frescos, "as ervas secas não foram para a bolsa");
+            yield return Apertar(GameKey.Fechar);
+            yield return Esperar(() => !Tela.IsModal, "Esc não fechou o varal");
+            Assert.AreEqual(0, Sessao.Inventory.Count(Inventory.Herb("mulungu")), "não sobrou mulungu fresco: só o seco pode servir");
+
+            yield return Abrir(Estacao(GameUI.Window.Caldeirao), GameUI.Window.Caldeirao);
+            yield return Foto("caldeirao-so-com-mulungu-seco");
+            string cha = Inventory.Product(GameDatabase.SimpleRemedyPrefix + "mulungu");
+            yield return Clicar("Preparar");
+            yield return Esperar(() => Sessao.Inventory.Count(cha) == 1, "o chá de mulungu não saiu com a erva seca");
+            Assert.AreEqual(frescos - 1, Sessao.Inventory.Count(Inventory.Dried("mulungu")), "o chá gastou um mulungu seco");
+        }
     }
 }

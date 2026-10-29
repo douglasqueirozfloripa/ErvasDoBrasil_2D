@@ -16,8 +16,11 @@ namespace ErvasDoBrasil.Core
         Sorte     // prosperidade: vende melhor e colhe mais
     }
 
-    /// <summary>Forma em que a erva entra numa receita.</summary>
-    public enum HerbForm { Fresca, Seca, Po }
+    /// <summary>
+    /// Forma em que a erva entra numa receita. <see cref="FrescaOuSeca"/> é a dos preparos simples (chá, gel, ramo...):
+    /// a erva fresca ou a seca servem, porque chá se faz com as duas; a fresca é gasta primeiro.
+    /// </summary>
+    public enum HerbForm { Fresca, Seca, Po, FrescaOuSeca }
 
     /// <summary>
     /// Bônus de atributos aplicados ao usar um produto. Compartilhado por plantas (preparo simples) e receitas.
@@ -94,7 +97,7 @@ namespace ErvasDoBrasil.Core
     {
         public string plantId;
         public int qtd = 1;
-        public string forma;   // "Fresca" (padrão) | "Seca" | "Po"
+        public string forma;   // "Fresca" (padrão) | "Seca" | "Po" | "FrescaOuSeca"
 
         public Ingredient() { }
 

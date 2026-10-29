@@ -32,7 +32,7 @@
 - Livro com as abas Plantas, Males, Receitas e Assombrações
 - Controles de toque (joystick + botões) no iPhone e teclado/mouse no Mac
 - Arte 100% original no estilo "Quintal Minimalista" e trilha original por ambiente (dia, feira, noite)
-- 211 testes unitários e 36 de interface, **lint** do C# (`./scripts/lint.sh`: analisadores .NET + Unity e `dotnet format`) e scripts de setup, build e testes
+- 239 testes unitários e 38 de interface (um deles mede o FPS por 15 s e dá nota de ruim a excelente), **lint** do C# (`./scripts/lint.sh`: analisadores .NET + Unity e `dotnet format`) e scripts de setup, build e testes
 - Janela **Bastidores do desenvolvimento**: como o jogo foi feito, ciclo de vida do app, Unity × Web e um diário ao vivo do ciclo de vida
 
 ## O que falta (ver [13-escopo-freelancer.md](13-escopo-freelancer.md))

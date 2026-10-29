@@ -24,6 +24,7 @@ namespace ErvasDoBrasil.Core
         public static string Powder(string plantId) { return PowderPrefix + plantId; }
         public static string Seed(string plantId) { return SeedPrefix + plantId; }
 
+        /// <summary>A chave da forma pedida. Em "fresca ou seca" é a fresca, a principal; <see cref="IngredientKeys"/> dá as duas.</summary>
         public static string HerbKey(string plantId, HerbForm form)
         {
             switch (form)
@@ -32,6 +33,38 @@ namespace ErvasDoBrasil.Core
                 case HerbForm.Po: return Powder(plantId);
                 default: return Herb(plantId);
             }
+        }
+
+        /// <summary>As chaves que servem para um ingrediente: a da forma pedida ou, em "fresca ou seca", a fresca e depois a seca.</summary>
+        public static string[] IngredientKeys(Ingredient ing)
+        {
+            return ing.Form == HerbForm.FrescaOuSeca
+                ? new[] { Herb(ing.plantId), Dried(ing.plantId) }
+                : new[] { IngredientKey(ing) };
+        }
+
+        /// <summary>Quanto há na bolsa para o ingrediente, somando as formas que ele aceita.</summary>
+        public int Count(Ingredient ing)
+        {
+            int n = 0;
+            foreach (var k in IngredientKeys(ing)) n += Count(k);
+            return n;
+        }
+
+        public bool Has(Ingredient ing) { return Count(ing) >= ing.qtd; }
+
+        /// <summary>Gasta o ingrediente na ordem das chaves (a fresca antes da seca). Sem o bastante, não tira nada.</summary>
+        public bool Remove(Ingredient ing)
+        {
+            if (!Has(ing)) return false;
+            int falta = ing.qtd;
+            foreach (var k in IngredientKeys(ing))
+            {
+                int tira = Math.Min(falta, Count(k));
+                if (tira > 0) { Remove(k, tira); falta -= tira; }
+                if (falta == 0) break;
+            }
+            return true;
         }
 
         public static string IngredientKey(Ingredient ing) { return HerbKey(ing.plantId, ing.Form); }

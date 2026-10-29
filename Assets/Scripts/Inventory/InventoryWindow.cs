@@ -79,7 +79,9 @@ namespace ErvasDoBrasil
             var p = S.Db.Plant(id);
             if (p == null) return null;
             if (kind == ItemKind.Semente) return "Plante num canteiro preparado. Cresce em ~" + Mathf.RoundToInt(p.tempoCrescimento) + "s regada.";
-            return S.Herbarium.IsDiscovered(id) ? p.efeitoNoJogo : null;
+            if (!S.Herbarium.IsDiscovered(id)) return null;
+            if (kind == ItemKind.ErvaSeca) return p.efeitoNoJogo + " Seca, serve no caldeirão como a fresca e vira pó no pilão.";
+            return p.efeitoNoJogo;
         }
     }
 }
