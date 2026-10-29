@@ -1,0 +1,377 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78cd4fbcc3597471c874aa2d6dcef4c4, type: 3}
+  m_Name: ArtLibrary
+  m_EditorClassIdentifier: ErvasDoBrasil.Game::ErvasDoBrasil.ArtLibrary
+  sprites:
+  - key: icon_amuleto_arruda
+    sprite: {fileID: 21300000, guid: 939fa50b7f11a4916aa527f92aea49f5, type: 3}
+  - key: icon_banho_descarrego
+    sprite: {fileID: 21300000, guid: 693ab6ac65938425b8a3dbb548a06dd0, type: 3}
+  - key: icon_defumacao_forte
+    sprite: {fileID: 21300000, guid: 8b76c6e9f5d5d471a8586f0f6490fe71, type: 3}
+  - key: icon_elixir_calmaria
+    sprite: {fileID: 21300000, guid: 578ebfe704688491ebaa21d4f15086d7, type: 3}
+  - key: icon_elixir_da_mata
+    sprite: {fileID: 21300000, guid: 7595c0bc93878474c8df00f07bcf6fe1, type: 3}
+  - key: icon_elixir_recomeco
+    sprite: {fileID: 21300000, guid: ae915c5c93183476699c245b060cc89a, type: 3}
+  - key: icon_garrafada_da_vo
+    sprite: {fileID: 21300000, guid: a375531b1e0f041f6be369cbc07bd548, type: 3}
+  - key: icon_pa
+    sprite: {fileID: 21300000, guid: cbe63d1d7f8b747ddabe954092345db3, type: 3}
+  - key: icon_remedio_alecrim
+    sprite: {fileID: 21300000, guid: 019d32a27c3264096bd634970094d275, type: 3}
+  - key: icon_remedio_arruda
+    sprite: {fileID: 21300000, guid: 8864a4a5d61c2480c9e0cda5f2788c89, type: 3}
+  - key: icon_remedio_babosa
+    sprite: {fileID: 21300000, guid: 0d92ea9487e09461782d696942991114, type: 3}
+  - key: icon_remedio_boldo
+    sprite: {fileID: 21300000, guid: 0de70801bece4418faec6ea70da173ff, type: 3}
+  - key: icon_remedio_camomila
+    sprite: {fileID: 21300000, guid: b045728696839410c9ac0a7caa51f227, type: 3}
+  - key: icon_remedio_capim_santo
+    sprite: {fileID: 21300000, guid: c29c7ff2bc32748988e7323ad4716d53, type: 3}
+  - key: icon_remedio_carqueja
+    sprite: {fileID: 21300000, guid: 7b821a4939e974db8aceb25a914666fa, type: 3}
+  - key: icon_remedio_erva_cidreira
+    sprite: {fileID: 21300000, guid: 6e1081e02bae34297bf5ae830b9f0a57, type: 3}
+  - key: icon_remedio_erva_mate
+    sprite: {fileID: 21300000, guid: 43af8ddd5878341f38e2e12d6c579d4d, type: 3}
+  - key: icon_remedio_espinheira_santa
+    sprite: {fileID: 21300000, guid: ade43545cbd90435fbd15a167a2360b5, type: 3}
+  - key: icon_remedio_gengibre
+    sprite: {fileID: 21300000, guid: 86d490eb7ab494efda1babab132ef2ec, type: 3}
+  - key: icon_remedio_guaco
+    sprite: {fileID: 21300000, guid: f486f9010405d48ce95c59936505d2a4, type: 3}
+  - key: icon_remedio_guarana
+    sprite: {fileID: 21300000, guid: 8ea501774a34f4345a5caff335d85781, type: 3}
+  - key: icon_remedio_guine
+    sprite: {fileID: 21300000, guid: f589c666360164bc28e8ab5defb9fb56, type: 3}
+  - key: icon_remedio_hortela
+    sprite: {fileID: 21300000, guid: 3fe2ef61ab6f847af9609bec64d93781, type: 3}
+  - key: icon_remedio_jambu
+    sprite: {fileID: 21300000, guid: eb4c395153b8f4fea8a291ff95c247e9, type: 3}
+  - key: icon_remedio_manjericao
+    sprite: {fileID: 21300000, guid: 362107298c3df4e8cb78a6e2aeeeef72, type: 3}
+  - key: icon_remedio_maracuja
+    sprite: {fileID: 21300000, guid: 732d0438d5d9a4dcab21f8a8e8b4b2be, type: 3}
+  - key: icon_remedio_mulungu
+    sprite: {fileID: 21300000, guid: 7c757b0191f2d4724b56491f26178b93, type: 3}
+  - key: icon_remedio_quebra_pedra
+    sprite: {fileID: 21300000, guid: 8181f12449de8491f805b36d6c57402b, type: 3}
+  - key: icon_xarope_guaco
+    sprite: {fileID: 21300000, guid: 570c084fe4bc94ccfbaf538f3a637a03, type: 3}
+  - key: map_fazenda
+    sprite: {fileID: 21300000, guid: 57533c3ce8a434223ac1de3dd899ac45, type: 3}
+  - key: npc_cida
+    sprite: {fileID: 21300000, guid: 9c72fbaaa1c5d4c6eb30e91b36423dad, type: 3}
+  - key: npc_juca
+    sprite: {fileID: 21300000, guid: 2826bdd79398047428666780eb53aba1, type: 3}
+  - key: npc_lucia
+    sprite: {fileID: 21300000, guid: 96614b59fb5c748ec979da12ce0060dd, type: 3}
+  - key: npc_maria
+    sprite: {fileID: 21300000, guid: d50028f763306435f8e0ae31c7b65b89, type: 3}
+  - key: npc_tonhao
+    sprite: {fileID: 21300000, guid: f3edd1f6a4fe04ef2a33c9fd3f86c0c5, type: 3}
+  - key: npc_ze
+    sprite: {fileID: 21300000, guid: 8947adb777c1744d595c0eac586e1c86, type: 3}
+  - key: plant_alecrim_0
+    sprite: {fileID: 21300000, guid: 5b12836175ca04bedab21dddc3b91e1f, type: 3}
+  - key: plant_alecrim_1
+    sprite: {fileID: 21300000, guid: b55cdb982c8324ce8b6fc148a5dd0e64, type: 3}
+  - key: plant_alecrim_2
+    sprite: {fileID: 21300000, guid: 45eab8e7987f24145934e72e7d277f91, type: 3}
+  - key: plant_alecrim_3
+    sprite: {fileID: 21300000, guid: 3283806771990436f9087a9a50f1c513, type: 3}
+  - key: plant_alecrim_4
+    sprite: {fileID: 21300000, guid: 7210c6332142f49879268ad0d17a65a8, type: 3}
+  - key: plant_arruda_0
+    sprite: {fileID: 21300000, guid: e4994e7eae20a4553b6451c1282756b8, type: 3}
+  - key: plant_arruda_1
+    sprite: {fileID: 21300000, guid: d69c00434b0cd4fd59192b7993d58895, type: 3}
+  - key: plant_arruda_2
+    sprite: {fileID: 21300000, guid: 1762d533419d64a289248ea8e04171ad, type: 3}
+  - key: plant_arruda_3
+    sprite: {fileID: 21300000, guid: c69a0b6393e73453089eed789a889c4a, type: 3}
+  - key: plant_arruda_4
+    sprite: {fileID: 21300000, guid: 42842aa0d9ea3424e9d9965d5f0d1d13, type: 3}
+  - key: plant_babosa_0
+    sprite: {fileID: 21300000, guid: 9f6d073838da64638a22e26bf694d1b8, type: 3}
+  - key: plant_babosa_1
+    sprite: {fileID: 21300000, guid: e377a9ebb8a994808bb088c04781b6c0, type: 3}
+  - key: plant_babosa_2
+    sprite: {fileID: 21300000, guid: f024693de092e47938977f3952e1c0f4, type: 3}
+  - key: plant_babosa_3
+    sprite: {fileID: 21300000, guid: 5263629c2bc364ad9923b452e3ea1459, type: 3}
+  - key: plant_babosa_4
+    sprite: {fileID: 21300000, guid: f3f3d6efa82e74ad6ad4cb5a133467b7, type: 3}
+  - key: plant_boldo_0
+    sprite: {fileID: 21300000, guid: 06a27806532d1472c88c646a12fdc6e9, type: 3}
+  - key: plant_boldo_1
+    sprite: {fileID: 21300000, guid: 40e852f8f4b114046a050a54cbc3a8f1, type: 3}
+  - key: plant_boldo_2
+    sprite: {fileID: 21300000, guid: 98aa1ae48d68746b8948d70ad513e82c, type: 3}
+  - key: plant_boldo_3
+    sprite: {fileID: 21300000, guid: 73f654ff06f144582bbf361744bca924, type: 3}
+  - key: plant_boldo_4
+    sprite: {fileID: 21300000, guid: d2e291cc014934848887a15ceb407bba, type: 3}
+  - key: plant_camomila_0
+    sprite: {fileID: 21300000, guid: c155b1f56f0cc45a5a9766975e262c1d, type: 3}
+  - key: plant_camomila_1
+    sprite: {fileID: 21300000, guid: 240cc3085c5bc467ebead432ba598683, type: 3}
+  - key: plant_camomila_2
+    sprite: {fileID: 21300000, guid: 6aa3b3be3ded14e5cbb75fa7b21da6be, type: 3}
+  - key: plant_camomila_3
+    sprite: {fileID: 21300000, guid: df36dfd2912a54914b572929e9671c0a, type: 3}
+  - key: plant_camomila_4
+    sprite: {fileID: 21300000, guid: 8caae3ff78eab4a3b83f4c9d9772b566, type: 3}
+  - key: plant_capim_santo_0
+    sprite: {fileID: 21300000, guid: aabac65191043426ab6935f39f35a200, type: 3}
+  - key: plant_capim_santo_1
+    sprite: {fileID: 21300000, guid: 8227c374456cd4345afc7f71dcb87ae2, type: 3}
+  - key: plant_capim_santo_2
+    sprite: {fileID: 21300000, guid: c06a38d4c1cb24c90804f3520f29cfab, type: 3}
+  - key: plant_capim_santo_3
+    sprite: {fileID: 21300000, guid: 5fac35fbeb5344e7fb6362b351eb09a9, type: 3}
+  - key: plant_capim_santo_4
+    sprite: {fileID: 21300000, guid: 33cf374c32de341a495147a7e1f90bed, type: 3}
+  - key: plant_carqueja_0
+    sprite: {fileID: 21300000, guid: d5e3282a9b85e4806be3f7c6563a37a3, type: 3}
+  - key: plant_carqueja_1
+    sprite: {fileID: 21300000, guid: 84bdd5ed041e14f44971c8cc49860a08, type: 3}
+  - key: plant_carqueja_2
+    sprite: {fileID: 21300000, guid: 73c1a91fd545541b19c4658062763c35, type: 3}
+  - key: plant_carqueja_3
+    sprite: {fileID: 21300000, guid: c0b937ceea278421483c2facc71764aa, type: 3}
+  - key: plant_carqueja_4
+    sprite: {fileID: 21300000, guid: 974b5ba55696c4860a8ed7a0e57bb378, type: 3}
+  - key: plant_comigo_ninguem_pode_0
+    sprite: {fileID: 21300000, guid: 1dc002a9eb9774a48848a74c0447faf2, type: 3}
+  - key: plant_comigo_ninguem_pode_1
+    sprite: {fileID: 21300000, guid: 5d54ce0c90c974597a456580b8cf5134, type: 3}
+  - key: plant_comigo_ninguem_pode_2
+    sprite: {fileID: 21300000, guid: 807706d7c7ac943489e1fcdce5c46c3d, type: 3}
+  - key: plant_comigo_ninguem_pode_3
+    sprite: {fileID: 21300000, guid: cc39c7346b6eb4251a0bdec002bb448a, type: 3}
+  - key: plant_comigo_ninguem_pode_4
+    sprite: {fileID: 21300000, guid: 534b0f32579ba42b8aa43df9655f2693, type: 3}
+  - key: plant_erva_cidreira_0
+    sprite: {fileID: 21300000, guid: 8e2360c37f3cc4eeab07b6878d722416, type: 3}
+  - key: plant_erva_cidreira_1
+    sprite: {fileID: 21300000, guid: ff7b8aa528d214b7a9911dfd583d22c8, type: 3}
+  - key: plant_erva_cidreira_2
+    sprite: {fileID: 21300000, guid: 7ea732c1c0ebe4574ac3e754d2223985, type: 3}
+  - key: plant_erva_cidreira_3
+    sprite: {fileID: 21300000, guid: 926c71fd3611a4759b11c7bd97ed46ca, type: 3}
+  - key: plant_erva_cidreira_4
+    sprite: {fileID: 21300000, guid: 70b6373133a9147488ebfcb341e9c9d6, type: 3}
+  - key: plant_erva_mate_0
+    sprite: {fileID: 21300000, guid: 46cbc49bcde814cac85e8434904038f2, type: 3}
+  - key: plant_erva_mate_1
+    sprite: {fileID: 21300000, guid: a07c4e1011a374726aa24105ec29e1ad, type: 3}
+  - key: plant_erva_mate_2
+    sprite: {fileID: 21300000, guid: 135ba40d4ed10473d8b2addddff08a98, type: 3}
+  - key: plant_erva_mate_3
+    sprite: {fileID: 21300000, guid: 399b1abe0bc844e30824eff7172cb06e, type: 3}
+  - key: plant_erva_mate_4
+    sprite: {fileID: 21300000, guid: 106f8c5bd5a4d43c6b0c2c9191ab3374, type: 3}
+  - key: plant_espada_sao_jorge_0
+    sprite: {fileID: 21300000, guid: 9190c289f2b2e4a34a5c9684b4825ef7, type: 3}
+  - key: plant_espada_sao_jorge_1
+    sprite: {fileID: 21300000, guid: 036c84de4f22f4dd587d5dc11a2c0dae, type: 3}
+  - key: plant_espada_sao_jorge_2
+    sprite: {fileID: 21300000, guid: e4ecc4dad74454c4f8d677a7657b4d8c, type: 3}
+  - key: plant_espada_sao_jorge_3
+    sprite: {fileID: 21300000, guid: 2fd9cf6fb74b54670b91fc6e23da76c1, type: 3}
+  - key: plant_espada_sao_jorge_4
+    sprite: {fileID: 21300000, guid: 4284774d247ee4dd8994a3d6d490bf17, type: 3}
+  - key: plant_espinheira_santa_0
+    sprite: {fileID: 21300000, guid: e02f3ab36deb7497a9d37961a188d4c5, type: 3}
+  - key: plant_espinheira_santa_1
+    sprite: {fileID: 21300000, guid: 186c2f672b7134bdda01c79101a8ab42, type: 3}
+  - key: plant_espinheira_santa_2
+    sprite: {fileID: 21300000, guid: 3f76dcb2e0b1946069c7481bb8539a60, type: 3}
+  - key: plant_espinheira_santa_3
+    sprite: {fileID: 21300000, guid: bb0e32103a0404881be05081fd13fcb6, type: 3}
+  - key: plant_espinheira_santa_4
+    sprite: {fileID: 21300000, guid: af0a0b687324b42758a3b2317337daf1, type: 3}
+  - key: plant_gengibre_0
+    sprite: {fileID: 21300000, guid: 311d669bf6c2945d5bb8efcfbdd54d94, type: 3}
+  - key: plant_gengibre_1
+    sprite: {fileID: 21300000, guid: 09d27222a510e4690a8a0d8ce16a2a2e, type: 3}
+  - key: plant_gengibre_2
+    sprite: {fileID: 21300000, guid: 7e2e73b0a08244ee5b1944e007effc03, type: 3}
+  - key: plant_gengibre_3
+    sprite: {fileID: 21300000, guid: d4e9976980ed94f649d0b708306ccf01, type: 3}
+  - key: plant_gengibre_4
+    sprite: {fileID: 21300000, guid: ce91f7d823ce64de79b4d0d22931746f, type: 3}
+  - key: plant_guaco_0
+    sprite: {fileID: 21300000, guid: 4a1c5a280edb24b0f86cd74bd6867451, type: 3}
+  - key: plant_guaco_1
+    sprite: {fileID: 21300000, guid: b1fce53064f3e487a9926fca8651ea7d, type: 3}
+  - key: plant_guaco_2
+    sprite: {fileID: 21300000, guid: d0e820bdb69264d08aa5c622b5760c28, type: 3}
+  - key: plant_guaco_3
+    sprite: {fileID: 21300000, guid: 73b65f45fbc8649f98da9b083c529075, type: 3}
+  - key: plant_guaco_4
+    sprite: {fileID: 21300000, guid: 264659d24aa29413b806c66fa3cb2322, type: 3}
+  - key: plant_guarana_0
+    sprite: {fileID: 21300000, guid: d87f1656e775b42e2aececcdcc47266c, type: 3}
+  - key: plant_guarana_1
+    sprite: {fileID: 21300000, guid: 9b1a9c7423b0d48118c69badd3f9e9f2, type: 3}
+  - key: plant_guarana_2
+    sprite: {fileID: 21300000, guid: 45fbbb2ab6c20415abea34e520ecf534, type: 3}
+  - key: plant_guarana_3
+    sprite: {fileID: 21300000, guid: d4fd7d50589d74ab58105e77263f6153, type: 3}
+  - key: plant_guarana_4
+    sprite: {fileID: 21300000, guid: e2f7e4494c3cb450bb992abc0f7a4f83, type: 3}
+  - key: plant_guine_0
+    sprite: {fileID: 21300000, guid: ee24caa21d59541d78aa358d312ec41b, type: 3}
+  - key: plant_guine_1
+    sprite: {fileID: 21300000, guid: e66536672a8384eaea6c81c8b05754f5, type: 3}
+  - key: plant_guine_2
+    sprite: {fileID: 21300000, guid: 885010be1f5f7453083a3e3605805db5, type: 3}
+  - key: plant_guine_3
+    sprite: {fileID: 21300000, guid: 64c3bc8692aa146b1830fea78def6c1f, type: 3}
+  - key: plant_guine_4
+    sprite: {fileID: 21300000, guid: 152e319c9e4ac4798a5c80e0576fe9bc, type: 3}
+  - key: plant_hortela_0
+    sprite: {fileID: 21300000, guid: 743c4fdcac3cc46a7855869ebc9561ec, type: 3}
+  - key: plant_hortela_1
+    sprite: {fileID: 21300000, guid: 195b8cd63790b4d55a0f9e3bf4b5d09c, type: 3}
+  - key: plant_hortela_2
+    sprite: {fileID: 21300000, guid: 1817b3671a79c45bbb01c3341b5c8e54, type: 3}
+  - key: plant_hortela_3
+    sprite: {fileID: 21300000, guid: 48421aff11a974661a3180afdd13033d, type: 3}
+  - key: plant_hortela_4
+    sprite: {fileID: 21300000, guid: c4a3b5333676e45ec8b84516cf6db928, type: 3}
+  - key: plant_jambu_0
+    sprite: {fileID: 21300000, guid: 680fedaa48132481087a7235fe93eb1b, type: 3}
+  - key: plant_jambu_1
+    sprite: {fileID: 21300000, guid: d265453d71fa64bd39ff0f17f97c5204, type: 3}
+  - key: plant_jambu_2
+    sprite: {fileID: 21300000, guid: f62dbe5376f43451ca9fea4302b6949f, type: 3}
+  - key: plant_jambu_3
+    sprite: {fileID: 21300000, guid: bcead5ab1af3d4f7fae50c8a6aa73a61, type: 3}
+  - key: plant_jambu_4
+    sprite: {fileID: 21300000, guid: c2314e79102d0443bac8b5f5cda1b2e5, type: 3}
+  - key: plant_manjericao_0
+    sprite: {fileID: 21300000, guid: 125e4e9dd9af74165a1575f64d7ae031, type: 3}
+  - key: plant_manjericao_1
+    sprite: {fileID: 21300000, guid: f9e28db0bf4764e709d9068001cc37cc, type: 3}
+  - key: plant_manjericao_2
+    sprite: {fileID: 21300000, guid: 74e62649c17d440ab8896bcd59b6d94c, type: 3}
+  - key: plant_manjericao_3
+    sprite: {fileID: 21300000, guid: c1ce7e77bd30a418eb75c75fa47859c3, type: 3}
+  - key: plant_manjericao_4
+    sprite: {fileID: 21300000, guid: 1d35b0d698d4542498d43cf224b7a559, type: 3}
+  - key: plant_maracuja_0
+    sprite: {fileID: 21300000, guid: 0d8fe95cba3a849b78401ec05c1f9811, type: 3}
+  - key: plant_maracuja_1
+    sprite: {fileID: 21300000, guid: 3ebe1bf585f1f4c969d9ea55d0517ec5, type: 3}
+  - key: plant_maracuja_2
+    sprite: {fileID: 21300000, guid: 3c4295bce420546f28df03c7c0e836a7, type: 3}
+  - key: plant_maracuja_3
+    sprite: {fileID: 21300000, guid: 2f448f917100b478a8cde31108a629f8, type: 3}
+  - key: plant_maracuja_4
+    sprite: {fileID: 21300000, guid: 6c64849f4d166453ab0317df5275443d, type: 3}
+  - key: plant_mulungu_0
+    sprite: {fileID: 21300000, guid: b08a34c5e45cd4c89a1fda36834e7bfe, type: 3}
+  - key: plant_mulungu_1
+    sprite: {fileID: 21300000, guid: e392b7c488ba74fb4950275d945d47e1, type: 3}
+  - key: plant_mulungu_2
+    sprite: {fileID: 21300000, guid: ec751c50ab56a42e79210f5e18a1fc6e, type: 3}
+  - key: plant_mulungu_3
+    sprite: {fileID: 21300000, guid: fdbdb20baf6f248c4bcee05e777d5d71, type: 3}
+  - key: plant_mulungu_4
+    sprite: {fileID: 21300000, guid: 0b62ddb64300147bfab9d8e8e55133c2, type: 3}
+  - key: plant_pimenteira_0
+    sprite: {fileID: 21300000, guid: 80183d40ffda542de8caee95e6189559, type: 3}
+  - key: plant_pimenteira_1
+    sprite: {fileID: 21300000, guid: 2ff685a8cf0a941cc97e676730443964, type: 3}
+  - key: plant_pimenteira_2
+    sprite: {fileID: 21300000, guid: 813db49e21c5743b5aa348a1343a81b5, type: 3}
+  - key: plant_pimenteira_3
+    sprite: {fileID: 21300000, guid: 4c4631f220f2f4aa18b15947c36efefb, type: 3}
+  - key: plant_pimenteira_4
+    sprite: {fileID: 21300000, guid: 11914f72da2dc4e968de7cb4b60134ac, type: 3}
+  - key: plant_quebra_pedra_0
+    sprite: {fileID: 21300000, guid: d6cddd41aead7439bb031494bc759e50, type: 3}
+  - key: plant_quebra_pedra_1
+    sprite: {fileID: 21300000, guid: 1f4d240f4d76d43349f35f45ae80f81f, type: 3}
+  - key: plant_quebra_pedra_2
+    sprite: {fileID: 21300000, guid: 2148b81a06c03406994213fabf07076a, type: 3}
+  - key: plant_quebra_pedra_3
+    sprite: {fileID: 21300000, guid: 300ca23406a27406b9e93d0f0de8cb37, type: 3}
+  - key: plant_quebra_pedra_4
+    sprite: {fileID: 21300000, guid: 38f884e373d0a49418229a6cb3785067, type: 3}
+  - key: player_down_0
+    sprite: {fileID: 21300000, guid: ab63871041dce4dd4ba4a6152b55ce79, type: 3}
+  - key: player_down_1
+    sprite: {fileID: 21300000, guid: 19e3d393f231648da82050233d7b35d2, type: 3}
+  - key: player_down_2
+    sprite: {fileID: 21300000, guid: ee488330e8fb041fbb83a90aefae67de, type: 3}
+  - key: player_forage
+    sprite: {fileID: 21300000, guid: 3016119e167dd4302aba44530372db1b, type: 3}
+  - key: player_grind
+    sprite: {fileID: 21300000, guid: f70a464e181cd473da0dace8127c1676, type: 3}
+  - key: player_idle
+    sprite: {fileID: 21300000, guid: b1d55a1690fe442a0a695d460c219163, type: 3}
+  - key: player_portrait
+    sprite: {fileID: 21300000, guid: 61e573f3d0df64f288bd1e5bb9361142, type: 3}
+  - key: player_right_0
+    sprite: {fileID: 21300000, guid: 435d897e0fa8c41a0be497ebdf292987, type: 3}
+  - key: player_right_1
+    sprite: {fileID: 21300000, guid: 276e3a5b315194682be546cfca0042c1, type: 3}
+  - key: player_right_2
+    sprite: {fileID: 21300000, guid: 7bfd5447da92243aa9e6e3ca5aca7c72, type: 3}
+  - key: player_up_0
+    sprite: {fileID: 21300000, guid: ca4e4215cd79e4bd9a43953d12213983, type: 3}
+  - key: player_up_1
+    sprite: {fileID: 21300000, guid: b07533632dfcd41bf830ef019aa408da, type: 3}
+  - key: player_up_2
+    sprite: {fileID: 21300000, guid: 11cd617754ce045dbb98bae8e3218e8c, type: 3}
+  - key: prop_caldeirao
+    sprite: {fileID: 21300000, guid: 27c2a36e48edc4c6c9c5f95071202987, type: 3}
+  - key: prop_casa
+    sprite: {fileID: 21300000, guid: 1586230e943824e5ca438ff9b9a92c38, type: 3}
+  - key: prop_feira
+    sprite: {fileID: 21300000, guid: 674429b82e9e34e14aab821dd5124726, type: 3}
+  - key: prop_pilao
+    sprite: {fileID: 21300000, guid: 0fe93c274d5de40478902ce5e284c475, type: 3}
+  - key: prop_varal
+    sprite: {fileID: 21300000, guid: cfbefbb1785a742b4ad8a01889bfb60b, type: 3}
+  - key: spirit_alma_0
+    sprite: {fileID: 21300000, guid: e717f6dfbea554cc6929ada8ebeefc6f, type: 3}
+  - key: spirit_alma_1
+    sprite: {fileID: 21300000, guid: 36bfe5e39efb24fdd9ee3a83d3916502, type: 3}
+  - key: spirit_bernuncia_0
+    sprite: {fileID: 21300000, guid: efde0214d36134f278c564684617851b, type: 3}
+  - key: spirit_bernuncia_1
+    sprite: {fileID: 21300000, guid: fb8fe69af64c743f297eba54fdfbd757, type: 3}
+  - key: spirit_cuca_0
+    sprite: {fileID: 21300000, guid: 8c0f00f36cefe4c48a6e034ae65d210a, type: 3}
+  - key: spirit_cuca_1
+    sprite: {fileID: 21300000, guid: 4c54ad973f4d8442bada544a0c2ffc87, type: 3}
+  - key: spirit_olhogordo_0
+    sprite: {fileID: 21300000, guid: c1599a384ac7c4210bcee2275159d36b, type: 3}
+  - key: spirit_olhogordo_1
+    sprite: {fileID: 21300000, guid: b05f805412e704ce29408c7c40b37cf1, type: 3}
+  - key: spirit_saci_0
+    sprite: {fileID: 21300000, guid: 49ce8082289cd46028ba07f1f077a758, type: 3}
+  - key: spirit_saci_1
+    sprite: {fileID: 21300000, guid: 01a58f0d404484ad3a2f5858f76f29f0, type: 3}
+  - key: spirit_visagem_0
+    sprite: {fileID: 21300000, guid: 889843b14a74c49c68d52f450772fac8, type: 3}
+  - key: spirit_visagem_1
+    sprite: {fileID: 21300000, guid: cfeb3aa242a9d452fba391e87d9d47fd, type: 3}

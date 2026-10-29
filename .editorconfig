@@ -1,0 +1,68 @@
+# Estilo e análise estática do C# (lido pelo ./scripts/lint.sh, pelo dotnet format e pelos editores: VS Code, Rider, Visual Studio).
+# Severidades: error/warning fazem o lint falhar; suggestion só aparece no editor; none desliga.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{json,asmdef,yml,yaml}]
+indent_style = space
+indent_size = 2
+
+[*.cs]
+indent_style = space
+indent_size = 4
+
+# ── Formatação (verificada pelo dotnet format whitespace) ──
+# chaves em linha própria (Allman), como em todo o projeto
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+# o projeto usa blocos de uma linha ({ get { return x; } }, if (...) return;) e alinha comentários com espaços
+csharp_preserve_single_line_blocks = true
+csharp_preserve_single_line_statements = true
+# inicializadores de objeto podem agrupar campos relacionados na mesma linha (id = ..., nome = ...)
+csharp_new_line_before_members_in_object_initializers = false
+csharp_space_around_declaration_statements = ignore
+dotnet_sort_system_directives_first = true
+
+# ── Estilo de código (IDE*) que vira aviso ──
+# using desnecessário
+dotnet_diagnostic.IDE0005.severity = warning
+# membro privado nunca usado (o Microsoft.Unity.Analyzers ignora Awake, Update...)
+dotnet_diagnostic.IDE0051.severity = warning
+# membro privado escrito mas nunca lido
+dotnet_diagnostic.IDE0052.severity = warning
+# valor atribuído e nunca usado
+dotnet_diagnostic.IDE0059.severity = warning
+# parâmetro nunca usado
+dotnet_diagnostic.IDE0060.severity = warning
+# ordem dos modificadores (public static readonly)
+dotnet_diagnostic.IDE0036.severity = warning
+
+# ── Microsoft.Unity.Analyzers (UNT*): erros típicos de Unity viram aviso ──
+# (a categoria Performance também sobe as regras CA de desempenho, como a CA1861: array novo a cada chamada)
+dotnet_analyzer_diagnostic.category-Correctness.severity = warning
+dotnet_analyzer_diagnostic.category-Performance.severity = warning
+
+# ── Regras do .NET (CA*) desligadas de propósito ──
+# A Unity e o JsonUtility só serializam CAMPOS públicos: os dados (PlantData...) e os componentes usam campos.
+dotnet_diagnostic.CA1051.severity = none
+# Testes se chamam Metodo_cenario_resultado e os métodos CI_* são chamados pelo -executeMethod dos scripts.
+dotnet_diagnostic.CA1707.severity = none
+# Os auxiliares da GameUI (S, Label, Boxed...) ficam de instância de propósito: é uma classe parcial de UI.
+dotnet_diagnostic.CA1822.severity = suggestion
+
+[Assets/Scripts/Core/GameData.cs]
+# os campos em minúsculo espelham o JSON (aura) e as propriedades em maiúsculo dão a versão tipada (Aura)
+dotnet_diagnostic.CA1708.severity = none
+
+[Assets/Tests/**.cs]
+# nos testes, arrays literais deixam os cenários legíveis; desempenho não importa aqui
+dotnet_diagnostic.CA1861.severity = none

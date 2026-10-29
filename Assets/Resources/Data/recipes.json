@@ -1,0 +1,307 @@
+{
+ "receitas": [
+  {
+   "id": "garrafada_da_vo",
+   "nome": "Garrafada da Vó",
+   "tipo": "Garrafada",
+   "descricao": "Ervas secas curtidas juntas: o 'remédio pra tudo' do estômago.",
+   "efeito": "Cura",
+   "cura": [
+    "DorDeBarriga",
+    "Enjoo",
+    "Azia"
+   ],
+   "ingredientes": [
+    {
+     "plantId": "boldo",
+     "qtd": 1,
+     "forma": "Seca"
+    },
+    {
+     "plantId": "carqueja",
+     "qtd": 1,
+     "forma": "Seca"
+    },
+    {
+     "plantId": "espinheira_santa",
+     "qtd": 1,
+     "forma": "Seca"
+    }
+   ],
+   "bonus": {
+    "energiaPct": 0.3,
+    "sanidade": 0,
+    "aura": 0,
+    "velocidadePct": 0,
+    "segundos": 0
+   },
+   "precoVenda": 30,
+   "doses": 1,
+   "duracaoDias": 1,
+   "raio": 0,
+   "chanceQueimadura": 0.1
+  },
+  {
+   "id": "elixir_calmaria",
+   "nome": "Elixir da Calmaria",
+   "tipo": "Elixir",
+   "descricao": "Pó de camomila e maracujá com cidreira fresca. Silencia a cabeça.",
+   "efeito": "Cura",
+   "cura": [
+    "Ansiedade",
+    "Insonia"
+   ],
+   "ingredientes": [
+    {
+     "plantId": "camomila",
+     "qtd": 2,
+     "forma": "Po"
+    },
+    {
+     "plantId": "maracuja",
+     "qtd": 1,
+     "forma": "Po"
+    },
+    {
+     "plantId": "erva_cidreira",
+     "qtd": 1,
+     "forma": "Fresca"
+    }
+   ],
+   "bonus": {
+    "energiaPct": 0,
+    "sanidade": 60,
+    "aura": 0,
+    "velocidadePct": 0,
+    "segundos": 0
+   },
+   "precoVenda": 35,
+   "doses": 1,
+   "duracaoDias": 1,
+   "raio": 0,
+   "chanceQueimadura": 0.08
+  },
+  {
+   "id": "elixir_recomeco",
+   "nome": "Elixir do Recomeço",
+   "tipo": "Elixir",
+   "descricao": "Para quem está largando o cigarro: vale por 2 doses de mulungu.",
+   "efeito": "Cura",
+   "cura": [
+    "VontadeDeFumar",
+    "Ansiedade"
+   ],
+   "ingredientes": [
+    {
+     "plantId": "mulungu",
+     "qtd": 2,
+     "forma": "Po"
+    },
+    {
+     "plantId": "camomila",
+     "qtd": 1,
+     "forma": "Fresca"
+    }
+   ],
+   "bonus": {
+    "energiaPct": 0,
+    "sanidade": 30,
+    "aura": 0,
+    "velocidadePct": 0,
+    "segundos": 0
+   },
+   "precoVenda": 40,
+   "doses": 2,
+   "duracaoDias": 1,
+   "raio": 0,
+   "chanceQueimadura": 0.08
+  },
+  {
+   "id": "xarope_guaco",
+   "nome": "Xarope de Guaco",
+   "tipo": "Xarope",
+   "descricao": "Guaco, gengibre e hortelã: tosse e gripe numa colherada.",
+   "efeito": "Cura",
+   "cura": [
+    "Tosse",
+    "Gripe"
+   ],
+   "ingredientes": [
+    {
+     "plantId": "guaco",
+     "qtd": 2,
+     "forma": "Fresca"
+    },
+    {
+     "plantId": "gengibre",
+     "qtd": 1,
+     "forma": "Fresca"
+    },
+    {
+     "plantId": "hortela",
+     "qtd": 1,
+     "forma": "Fresca"
+    }
+   ],
+   "bonus": {
+    "energiaPct": 0.15,
+    "sanidade": 0,
+    "aura": 0,
+    "velocidadePct": 0,
+    "segundos": 0
+   },
+   "precoVenda": 28,
+   "doses": 1,
+   "duracaoDias": 1,
+   "raio": 0,
+   "chanceQueimadura": 0.05
+  },
+  {
+   "id": "elixir_da_mata",
+   "nome": "Elixir da Mata",
+   "tipo": "Elixir",
+   "descricao": "Guaraná, mate e gengibre: energia total e pernas ligeiras.",
+   "efeito": "Cura",
+   "cura": [
+    "Cansaco"
+   ],
+   "ingredientes": [
+    {
+     "plantId": "guarana",
+     "qtd": 1,
+     "forma": "Po"
+    },
+    {
+     "plantId": "erva_mate",
+     "qtd": 1,
+     "forma": "Seca"
+    },
+    {
+     "plantId": "gengibre",
+     "qtd": 1,
+     "forma": "Fresca"
+    }
+   ],
+   "bonus": {
+    "energiaPct": 1.0,
+    "sanidade": 0,
+    "aura": 0,
+    "velocidadePct": 0.5,
+    "segundos": 120
+   },
+   "precoVenda": 35,
+   "doses": 1,
+   "duracaoDias": 1,
+   "raio": 0,
+   "chanceQueimadura": 0.08
+  },
+  {
+   "id": "banho_descarrego",
+   "nome": "Banho de Descarrego",
+   "tipo": "Banho",
+   "descricao": "Arruda, guiné e alecrim: lava o mau-olhado e a assombração e traz sorte.",
+   "efeito": "Banho",
+   "cura": [
+    "MauOlhado",
+    "Assombrado"
+   ],
+   "ingredientes": [
+    {
+     "plantId": "arruda",
+     "qtd": 1,
+     "forma": "Fresca"
+    },
+    {
+     "plantId": "guine",
+     "qtd": 1,
+     "forma": "Fresca"
+    },
+    {
+     "plantId": "alecrim",
+     "qtd": 1,
+     "forma": "Fresca"
+    }
+   ],
+   "bonus": {
+    "energiaPct": 0,
+    "sanidade": 20,
+    "aura": 0,
+    "velocidadePct": 0,
+    "segundos": 0
+   },
+   "precoVenda": 30,
+   "doses": 1,
+   "duracaoDias": 1,
+   "raio": 0,
+   "chanceQueimadura": 0
+  },
+  {
+   "id": "defumacao_forte",
+   "nome": "Defumação Forte",
+   "tipo": "Defumacao",
+   "descricao": "Guiné e alecrim secos na brasa: bane espíritos num raio de 8 m.",
+   "efeito": "Banir",
+   "cura": [
+    "Assombrado"
+   ],
+   "ingredientes": [
+    {
+     "plantId": "guine",
+     "qtd": 2,
+     "forma": "Seca"
+    },
+    {
+     "plantId": "alecrim",
+     "qtd": 1,
+     "forma": "Seca"
+    }
+   ],
+   "bonus": {
+    "energiaPct": 0,
+    "sanidade": 0,
+    "aura": 0,
+    "velocidadePct": 0,
+    "segundos": 0
+   },
+   "precoVenda": 25,
+   "doses": 1,
+   "duracaoDias": 1,
+   "raio": 8,
+   "chanceQueimadura": 0
+  },
+  {
+   "id": "amuleto_arruda",
+   "nome": "Amuleto de Arruda e Pimenta",
+   "tipo": "Amuleto",
+   "descricao": "Patuá com arruda e pimenta: 2 dias com a aura protegida e espíritos à distância.",
+   "efeito": "Amuleto",
+   "cura": [
+    "MauOlhado"
+   ],
+   "ingredientes": [
+    {
+     "plantId": "arruda",
+     "qtd": 2,
+     "forma": "Fresca"
+    },
+    {
+     "plantId": "pimenteira",
+     "qtd": 1,
+     "forma": "Fresca"
+    }
+   ],
+   "bonus": {
+    "energiaPct": 0,
+    "sanidade": 0,
+    "aura": 30,
+    "velocidadePct": 0,
+    "segundos": 0
+   },
+   "precoVenda": 30,
+   "doses": 1,
+   "duracaoDias": 2,
+   "raio": 0,
+   "chanceQueimadura": 0
+  }
+ ]
+}

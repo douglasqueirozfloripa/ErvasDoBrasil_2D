@@ -1,0 +1,38 @@
+# Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+*.csproj
+*.sln
+# projetos do lint (tools/lint) são versionados; os da Unity, não
+!tools/lint/*.csproj
+!tools/lint/*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+.vs/
+.idea/
+.vscode/
+*.apk
+*.aab
+crashlytics-build.properties
+TestResults*.xml
+.DS_Store
+
+# referências antigas e caches
+_referencias_antigas/
+__pycache__/
+
+# anotações de reuniões (contêm e-mails dos participantes)
+*.docx

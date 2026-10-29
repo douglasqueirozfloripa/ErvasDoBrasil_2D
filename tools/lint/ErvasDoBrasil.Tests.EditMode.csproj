@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Espelha Assets/Tests/EditMode/ErvasDoBrasil.Tests.EditMode.asmdef: NUnit sobre o Core -->
+  <PropertyGroup>
+    <AssemblyName>ErvasDoBrasil.Tests.EditMode</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(ProjectRoot)Assets/Tests/EditMode/**/*.cs" />
+    <ProjectReference Include="ErvasDoBrasil.Core.csproj" />
+    <Reference Include="$(UnityManaged)/UnityEngine.*.dll" Private="false" />
+    <!-- o NUnit vem do pacote com.unity.ext.nunit, que a Unity baixa para Library/PackageCache -->
+    <Reference Include="$(ProjectRoot)Library/PackageCache/com.unity.ext.nunit*/net40/unity-custom/nunit.framework.dll" Private="false" />
+  </ItemGroup>
+</Project>

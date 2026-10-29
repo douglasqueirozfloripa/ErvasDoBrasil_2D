@@ -1,0 +1,24 @@
+# APIs proibidas no código que vai dentro do jogo (Core e Game). Regra RS0030 do Microsoft.CodeAnalysis.BannedApiAnalyzers.
+# O jogo é offline: não faz requisições, não abre portas, não roda programas externos. Ver docs/15-seguranca.md.
+# Formato: <id de documentação>;<mensagem>. N: = namespace inteiro, T: = tipo, M: = método.
+
+# rede do .NET: HttpClient, WebClient, Dns, sockets, websockets, e-mail, ping
+N:System.Net;o jogo é offline: nada de rede (docs/15-seguranca.md)
+N:System.Net.Http;o jogo é offline: nada de requisições HTTP (docs/15-seguranca.md)
+N:System.Net.Sockets;o jogo é offline: nada de sockets (docs/15-seguranca.md)
+N:System.Net.WebSockets;o jogo é offline: nada de websockets (docs/15-seguranca.md)
+N:System.Net.Security;o jogo é offline: nada de rede (docs/15-seguranca.md)
+N:System.Net.NetworkInformation;o jogo é offline: nada de rede (docs/15-seguranca.md)
+N:System.Net.Mail;o jogo é offline: nada de e-mail (docs/15-seguranca.md)
+
+# rede da Unity: UnityWebRequest (o módulo nem está no manifest, mas o lint enxerga todas as DLLs da Unity), WWW e Ping
+N:UnityEngine.Networking;o jogo é offline: nada de UnityWebRequest (docs/15-seguranca.md)
+T:UnityEngine.WWW;o jogo é offline: nada de WWW (docs/15-seguranca.md)
+T:UnityEngine.Ping;o jogo é offline: nada de ping (docs/15-seguranca.md)
+M:UnityEngine.Application.OpenURL(System.String);não abre links: o jogo não manda a jogadora para fora dele (docs/15-seguranca.md)
+
+# programas externos (curl, sh...) seriam um jeito de fazer rede por fora do C#
+T:System.Diagnostics.Process;o jogo não roda programas externos (docs/15-seguranca.md)
+
+# desserialização insegura: um save adulterado poderia executar código. Os saves são JSON (JsonUtility).
+T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter;desserialização insegura: use JsonUtility (docs/15-seguranca.md)
